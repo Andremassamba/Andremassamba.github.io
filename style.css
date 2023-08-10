@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+html, body{
+  background: rgba(25, 25, 25);
+  color: #fbfcdb;
+}
+
+/* para de icon ou lua */
+.icon {
+  margin-top: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background: linear-gradient(200deg, #e9defa 0%, #fbfcdb 100%);
+  position: relative;
+  transform: rotate(-35deg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon::after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background: rgba(25, 25, 25);
+  position: absolute;
+  right: -26px;
+}
+header{
+   margin-bottom: 40px;
+}
+
+header, main, footer{
+  text-align: center;
+}
+
+/* Texto animado */
+
+.animText {
+  margin: 0 auto;
+  border-right: 4px solid rgba(255, 255, 255, .75);
+  font-family: Monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21em; /* Define a largura do elemento para que a animação funcione corretamente */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 21em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.typing-animation {
+  animation: blinkCursor 600ms steps(50) infinite normal, typing 5s steps(50) infinite 2s both;
+}
+
+/* Para selecionar o pais */
+#paisSelect{
+  display: flex;
+  margin: 0 auto;
+  outline: none;
+  padding: 4px;
+  background: none;
+  color: white;
+  border-radius: 2px;
+}
+
+main #NumeroInput{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 4px;
+  width: 180px;
+  font-size: 20px;
+  background: #c0c0c81f;
+  color: white;
+  font-family: Monospace;
+  border: 2.5px solid white;
+  font-weight: 500;
+  outline: none;
+  border-radius: 2px;
+  text-align: center;
+}
+
+#btn{
+  margin: 0 auto;
+  margin-top: 14px;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Monospace;
+  width: 100px;
+  margin-bottom: 200px;
+}
+
+/* div mais opcao */
+#maisOpcao{
+  border: none;
+}
